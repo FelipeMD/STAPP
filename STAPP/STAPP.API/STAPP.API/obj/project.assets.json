@@ -557,17 +557,43 @@
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
       },
-      "STAPP.Infrastructure/1.0.0": {
+      "STAPP.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/STAPP.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/STAPP.Domain.dll": {}
+        }
+      },
+      "STAPP.Infrastructure.Migrations/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Pomelo.EntityFrameworkCore.MySql": "7.0.0"
+          "Microsoft.EntityFrameworkCore": "8.0.0-preview.1.23111.4",
+          "STAPP.Domain": "1.0.0",
+          "STAPP.Infrastructure.Repository": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/STAPP.Infrastructure.dll": {}
+          "bin/placeholder/STAPP.Infrastructure.Migrations.dll": {}
         },
         "runtime": {
-          "bin/placeholder/STAPP.Infrastructure.dll": {}
+          "bin/placeholder/STAPP.Infrastructure.Migrations.dll": {}
+        }
+      },
+      "STAPP.Infrastructure.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
+          "STAPP.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/STAPP.Infrastructure.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/STAPP.Infrastructure.Repository.dll": {}
         }
       }
     }
@@ -1896,10 +1922,20 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "STAPP.Infrastructure/1.0.0": {
+    "STAPP.Domain/1.0.0": {
       "type": "project",
-      "path": "../../STAPP.Infrastructure/STAPP.Infrastructure.csproj",
-      "msbuildProject": "../../STAPP.Infrastructure/STAPP.Infrastructure.csproj"
+      "path": "../../STAPP.Domain/STAPP.Domain.csproj",
+      "msbuildProject": "../../STAPP.Domain/STAPP.Domain.csproj"
+    },
+    "STAPP.Infrastructure.Migrations/1.0.0": {
+      "type": "project",
+      "path": "../../STAPP.Infrastructure.Migrations/STAPP.Infrastructure.Migrations.csproj",
+      "msbuildProject": "../../STAPP.Infrastructure.Migrations/STAPP.Infrastructure.Migrations.csproj"
+    },
+    "STAPP.Infrastructure.Repository/1.0.0": {
+      "type": "project",
+      "path": "../../STAPP.Infrastructure.Repository/STAPP.Infrastructure.Repository.csproj",
+      "msbuildProject": "../../STAPP.Infrastructure.Repository/STAPP.Infrastructure.Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1909,7 +1945,8 @@
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.14",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.0-preview.1.23111.4",
       "Pomelo.EntityFrameworkCore.MySql >= 7.0.0",
-      "STAPP.Infrastructure >= 1.0.0",
+      "STAPP.Infrastructure.Migrations >= 1.0.0",
+      "STAPP.Infrastructure.Repository >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0",
       "Swashbuckle.AspNetCore.Annotations >= 6.5.0",
       "Swashbuckle.AspNetCore.SwaggerUI >= 6.5.0"
@@ -1948,8 +1985,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Felipe\\RiderProjects\\STAPP\\STAPP\\STAPP\\STAPP.Infrastructure\\STAPP.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Felipe\\RiderProjects\\STAPP\\STAPP\\STAPP\\STAPP.Infrastructure\\STAPP.Infrastructure.csproj"
+            "C:\\Users\\Felipe\\RiderProjects\\STAPP\\STAPP\\STAPP\\STAPP.Infrastructure.Migrations\\STAPP.Infrastructure.Migrations.csproj": {
+              "projectPath": "C:\\Users\\Felipe\\RiderProjects\\STAPP\\STAPP\\STAPP\\STAPP.Infrastructure.Migrations\\STAPP.Infrastructure.Migrations.csproj"
+            },
+            "C:\\Users\\Felipe\\RiderProjects\\STAPP\\STAPP\\STAPP\\STAPP.Infrastructure.Repository\\STAPP.Infrastructure.Repository.csproj": {
+              "projectPath": "C:\\Users\\Felipe\\RiderProjects\\STAPP\\STAPP\\STAPP\\STAPP.Infrastructure.Repository\\STAPP.Infrastructure.Repository.csproj"
             }
           }
         }

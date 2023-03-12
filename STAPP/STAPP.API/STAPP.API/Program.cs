@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using MySqlConnector;
-using STAPP.Infrastructure.Context;
+using STAPP.Infrastructure.Migrations.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 

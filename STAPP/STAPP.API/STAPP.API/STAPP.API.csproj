@@ -21,7 +21,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\STAPP.Infrastructure\STAPP.Infrastructure.csproj" />
+      <ProjectReference Include="..\..\STAPP.Infrastructure.Migrations\STAPP.Infrastructure.Migrations.csproj" />
+      <ProjectReference Include="..\..\STAPP.Infrastructure.Repository\STAPP.Infrastructure.Repository.csproj" />
     </ItemGroup>
 
 </Project>
