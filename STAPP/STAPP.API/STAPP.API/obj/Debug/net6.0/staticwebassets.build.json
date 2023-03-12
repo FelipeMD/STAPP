@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "BVdwoZv9AS9Lq2ncFgQiG1A1uDAHbqLD+K8HxCfHsFg=",
+  "Source": "STAPP.API",
+  "BasePath": "_content/STAPP.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
